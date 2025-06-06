@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>Fly - Luxury Jet Flights</title>
+  <meta name="title" content="Fly - Luxury Jet Flights">
+  <meta name="description" content="This is a private flight html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'phthalo-green-2': '#123524',
+                    }
+                }
+            }
+        }
+        
+    </script>
+    <style>
+        .logo-slide {
+            display: inline-block;
+            animation: slide 60s linear infinite;
+            position: relative;
+        }
+        
+        .logos-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logos-container::before,
+        .logos-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .logos-container::before {
+            left: 0;
+            background: linear-gradient(90deg, rgba(18,53,36,1) 0%, rgba(18,53,36,0) 100%);
+        }
+        
+        .logos-container::after {
+            right: 0;
+            background: linear-gradient(270deg, rgba(18,53,36,1) 0%, rgba(18,53,36,0) 100%);
+        }
+        
+        .logos-container:hover .logo-slide {
+            animation-play-state: paused;
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .bg-luxury-jet {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .bg-luxury-interior {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .bg-support {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .transition-colors {
+            transition: color 0.3s ease;
+        }
+        
+        .collapse-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+         :root {
+            --phthalo-green-2: #0a3d2e;
+        }
+        body {
+            background-color: var(--phthalo-green-2);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .testimonial-slide {
+            transition: transform 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      
+<nav class="navbar" data-navbar>
+  <div class="navbar-top">
+    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+      <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+    </button>
+  </div>
+
+  <ul class="navbar-list">
+    <!-- Left-aligned items -->
+    <li class="navbar-item">
+      <a href="#home" class="navbar-link" data-nav-link>Home</a>
+    </li>
+    <li class="navbar-item">
+      <a href="#services" class="navbar-link" data-nav-link>Services</a>
+    </li>
+    <li class="navbar-item">
+      <a href="#" class="navbar-link" data-nav-link>News</a>
+    </li>
+
+    <!-- Centered Logo -->
+    <li class="navbar-logo">
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="102" height="48" alt="fly logo">
+      </a>
+    </li>
+
+    <!-- Right-aligned items -->
+    <li class="navbar-item">
+      <a href="#" class="navbar-link" data-nav-link>Shop</a>
+    </li>
+     <li class="navbar-item">
+      <a href="#" class="navbar-link" data-nav-link>Blog</a>
+    </li>
+    <li class="navbar-item">
+      <a href="#" class="navbar-link" data-nav-link>Contact</a>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+
+          <p class="hero-subtitle">Save time and fly with comfort</p>
+
+          <h1 class="h1 hero-title">Luxury Jet Flights</h1>
+
+          <div class="btn-wrapper">
+            <a href="#" class="btn btn-primary">Book Now</a>
+
+            
+
+          <img src="./assets/images/hero-banner.png" width="1000" height="426" alt="airplane" class="abs-img">
+
+        </div>
+      </section>
+
+<body class="min-h-screen">
+    <!-- Private Flight Section -->
+    <section class="container mx-auto px-4 py-16 md:py-24 fade-in">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">OUR PRIVATE FLIGHT</h1>
+                <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+                    Experience the ultimate in luxury and convenience with our private flight services. 
+                    Tailored to your needs, our fleet of state-of-the-art aircraft ensures comfort, 
+                    privacy, and efficiency for your travels across the globe.
+                </p>
+                <button class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Book Now
+                </button>
+            </div>
+            <div class="md:w-1/2">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="assets/images/airplane-taking-off-sunset-scene-generative-ai.jpg" 
+                         alt="Private Jet" 
+                         class="w-full h-auto object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <body class="bg-phthalo-green-2 text-white">
+    <!-- Services Section -->
+    <section class="py-20 bg-luxury-jet">
+        <div class="container mx-auto px-4">
+            <p class="text-center uppercase tracking-widest text-sm font-medium text-yellow-300 mb-4">services</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-center mb-8">Unparalleled Luxury Jet Services</h1>
+            <p class="max-w-3xl mx-auto text-center text-lg mb-16">
+                Experience the pinnacle of private aviation with our bespoke luxury jet services. 
+                From personal flight attendants to Michelin-starred catering, we redefine what it means to fly in ultimate comfort and style.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-8 justify-center">
+                <!-- First Service -->
+                <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-xl p-8 flex-1 max-w-md">
+                    <h3 class="text-2xl font-bold mb-4">Private Charter Flights</h3>
+                    <p class="mb-6">
+                        Book an entire aircraft exclusively for you and your guests. Enjoy complete privacy, 
+                        customized schedules, and access to private terminals at airports worldwide.
+                    </p>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition-colors">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Second Service -->
+                <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-xl p-8 flex-1 max-w-md">
+                    <h3 class="text-2xl font-bold mb-4">Jet Membership Program</h3>
+                    <p class="mb-6">
+                        Our membership programs offer economical access to private jets with guaranteed availability, 
+                        fixed hourly rates, and no repositioning fees.
+                    </p>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Option Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Global Reach With Local Expertise</h2>
+                    <p class="text-lg mb-8">
+                        Our network spans across 1,800 airports worldwide with local concierge teams at your disposal. 
+                        We handle customs, ground transportation, and special requests so you can focus on your journey.
+                    </p>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full transition-colors">
+                        Explore Destinations
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="assets/images/about-banner.jpg" 
+                         alt="Private jet interior" 
+                         class="rounded-xl w-full max-w-md shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container mx-auto px-4 py-16 md:py-24">
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/3 space-y-8">
+                <span class="text-amber-400 uppercase tracking-widest font-semibold">Testimonial</span>
+                <h1 class="text-3xl md:text-4xl font-bold">What Our Clients Are Saying</h1>
+                <p class="text-gray-300">
+                    Our clients share their exceptional experiences flying with us around the world.
+                </p>
+                <div class="flex gap-4">
+                    <button id="prevBtn" class="w-12 h-12 flex items-center justify-center bg-amber-500 hover:bg-amber-600 rounded-full shadow-md transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="nextBtn" class="w-12 h-12 flex items-center justify-center bg-amber-500 hover:bg-amber-600 rounded-full shadow-md transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="md:w-2/3 relative overflow-hidden h-96">
+                <div id="testimonialSlider" class="flex h-full transition-transform duration-500 ease-in-out">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[calc(50%-1rem)] md:max-w-[calc(50%-1rem)] p-6">
+                        <div class="bg-teal-900/40 backdrop-blur-sm rounded-2xl p-8 h-full border border-teal-700">
+                            <div class="flex items-center mb-6">
+                               
+                                <div class="ml-4">
+                                    <h3 class="font-bold">Sarah Johnson</h3>
+                                    <p class="text-sm text-amber-300">CEO, Tech Innovations</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300">"The private flight experience was beyond exceptional. The crew's attention to detail and the luxurious amenities made my business trip seamless and enjoyable."</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[calc(50%-1rem)] md:max-w-[calc(50%-1rem)] p-6">
+                        <div class="bg-teal-900/40 backdrop-blur-sm rounded-2xl p-8 h-full border border-teal-700">
+                            <div class="flex items-center mb-6">
+                                
+                                <div class="ml-4">
+                                    <h3 class="font-bold">Michael Chen</h3>
+                                    <p class="text-sm text-amber-300">Founder, Global Ventures</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300">"Unmatched privacy and comfort. As a frequent flyer, I can confidently say this service is in a league of its own. The custom itinerary planning was impeccable."</p>
+                           
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[calc(50%-1rem)] md:max-w-[calc(50%-1rem)] p-6">
+                        <div class="bg-teal-900/40 backdrop-blur-sm rounded-2xl p-8 h-full border border-teal-700">
+                            <div class="flex items-center mb-6">
+                                
+                                <div class="ml-4">
+                                    <h3 class="font-bold">Emma Rodriguez</h3>
+                                    <p class="text-sm text-amber-300">Director, Luxury Group</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300">"Our family vacation was transformed by the private flight service. The children had space to play, and we arrived refreshed and ready to enjoy our destination."</p>
+
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[calc(50%-1rem)] md:max-w-[calc(50%-1rem)] p-6">
+                        <div class="bg-teal-900/40 backdrop-blur-sm rounded-2xl p-8 h-full border border-teal-700">
+                            <div class="flex items-center mb-6">
+                                 <div class="w-12 h-12 rounded-full object-cover border-2 border-amber-400">
+                                <div class="ml-4">
+                                    
+                                    
+                                </div>
+                            </div>
+                            <p class="text-gray-300">"The time saved with direct private flights is invaluable for my business. The onboard connectivity allowed me to work productively throughout the flight."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-full py-6 px-8 flex flex-col md:flex-row items-center overflow-hidden">
+                <div class="md:w-1/4 mb-6 md:mb-0 text-center md:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold">Our Partners</h3>
+                </div>
+                <div class="md:w-3/4">
+                    <div class="logos-container whitespace-nowrap">
+                        <div class="logo-slide inline-flex items-center space-x-12 px-12">
+                            <!-- Partner Logos (repeated for seamless loop) -->
+                            <img src="assets/images/Bombardier.png" alt="Bombardier" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/" alt="Dassault" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Gulfstream.png" alt="Gulfstream" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Cessna.jpg" alt="Cessna" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Embraer.jpg" alt="Embraer" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/pilatus.png" alt="Pilatus" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Airbus.jpg" alt="Airbus" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Airbus.jpg" alt="Boeing" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Sikorsky.jpg" alt="Sikorsky" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                           
+                            <img src="assets/images/HondaJet.png" alt="HondaJet" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Piper.png" alt="Piper" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Beechcraft.jpg" alt="Beechcraft" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="assets/images/Cirrus.png" alt="Cirrus" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            
+                            <img src="assets/images/Hawker.jpg" alt="Hawker" class="h-10 opacity-80 hover:opacity-100 transition-opacity">
+                            <!-- Duplicate for seamless loop -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore & Learn Section -->
+    <section class="container mx-auto px-4 py-16 md:py-24">
+        <div class="text-center mb-16">
+            <span class="text-amber-400 uppercase tracking-widest font-semibold">Explore & Learn</span>
+            <h1 class="text-3xl md:text-5xl font-bold mt-4 mb-6">Discover Our World of Luxury Travel</h1>
+            <p class="max-w-3xl mx-auto text-lg text-gray-300">
+                Delve into our curated collection of services and resources designed to elevate your travel experience.
+                From destination guides to aircraft specifications, we provide everything you need for informed decisions.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-teal-900/40 backdrop-blur-sm rounded-2xl p-8 border border-teal-700 hover:border-amber-400 transition duration-300 hover:-translate-y-2">
+                <div class="mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Time Efficiency</h3>
+                <p class="text-gray-300">
+                    Learn how private aviation can save you hundreds of hours compared to commercial flights, with direct routing and flexible scheduling.
+                </p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-teal-900/40 backdrop-blur-sm rounded-2xl p-8 border border-teal-700 hover:border-amber-400 transition duration-300 hover:-translate-y-2">
+                <div class="mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Aircraft Selection</h3>
+                <p class="text-gray-300">
+                    Explore our diverse fleet specifications to find the perfect aircraft for your specific needs and passenger count.
+                </p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-teal-900/40 backdrop-blur-sm rounded-2xl p-8 border border-teal-700 hover:border-amber-400 transition duration-300 hover:-translate-y-2">
+                <div class="mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Weather Insights</h3>
+                <p class="text-gray-300">
+                    Access real-time weather analysis for your planned route, with our expert guidance on optimal flight conditions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    
+    
+    
+    
+    <!-- Community Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="bg-luxury-interior rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <p class="uppercase tracking-widest text-sm font-medium text-yellow-300 mb-4">community</p>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Join Our Exclusive Jet Membership</h2>
+                    <p class="text-lg mb-8">
+                        Become part of our elite community of jet setters and aviation enthusiasts. 
+                        Enjoy members-only events, flight discounts, and networking opportunities with like-minded individuals.
+                    </p>
+                    <button class="bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-bold py-3 px-8 rounded-full transition-colors">
+                        Become a Member
+                    </button>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <img src="assets/images/offer-banner.jpg" 
+                         alt="Jet community networking" 
+                         class="rounded-xl w-full shadow-xl">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <p class="uppercase tracking-widest text-sm font-medium text-yellow-300 mb-4">need help?</p>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h2>
+                <p class="mb-12">Find answers to the most common queries about our luxury jet services and membership programs.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <img src="assets/images/flight-1.png" 
+                         alt="Private jet service" 
+                         class="rounded-xl w-full shadow-xl">
+                </div>
+                
+                <div class="md:w-1/2 space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border-b border-gray-700 pb-2">
+                        <button onclick="toggleFAQ('faq1')" class="flex justify-between items-center w-full py-3 text-left">
+                            <span class="text-lg font-medium">How do I book a private jet?</span>
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div id="faq1" class="collapse-content">
+                            <p class="pb-4 text-gray-300">Booking a private jet with us is simple. Contact our 24/7 concierge team via phone, email, or our mobile app. Our specialists will guide you through aircraft selection, itinerary planning, and all necessary arrangements to ensure a seamless experience.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="border-b border-gray-700 pb-2">
+                        <button onclick="toggleFAQ('faq2')" class="flex justify-between items-center w-full py-3 text-left">
+                            <span class="text-lg font-medium">What safety measures are in place?</span>
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div id="faq2" class="collapse-content">
+                            <p class="pb-4 text-gray-300">Safety is our top priority. We exclusively work with aircraft operators who meet the highest international safety standards. All our partners undergo rigorous safety audits, pilots receive regular training, and aircraft maintenance follows stringent protocols.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 3 -->
+                    <div class="border-b border-gray-700 pb-2">
+                        <button onclick="toggleFAQ('faq3')" class="flex justify-between items-center w-full py-3 text-left">
+                            <span class="text-lg font-medium">Can I customize my in-flight experience?</span>
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div id="faq3" class="collapse-content">
+                            <p class="pb-4 text-gray-300">Absolutely! From specific catering requests to onboard amenities, we'll tailor every aspect of your flight. Our concierge team can arrange special meals, entertainment systems, decor preferences, and even coordinate ground transportation at your destination.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 4 -->
+                    <div class="border-b border-gray-700 pb-2">
+                        <button onclick="toggleFAQ('faq4')" class="flex justify-between items-center w-full py-3 text-left">
+                            <span class="text-lg font-medium">What are the benefits of membership?</span>
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div id="faq4" class="collapse-content">
+                            <p class="pb-4 text-gray-300">Members enjoy preferred pricing, guaranteed availability, reduced booking lead times, and accumulated flight hours. Additional perks include access to exclusive events, private terminals worldwide, and personalized travel planning services.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 5 -->
+                    <div class="border-b border-gray-700 pb-2">
+                        <button onclick="toggleFAQ('faq5')" class="flex justify-between items-center w-full py-3 text-left">
+                            <span class="text-lg font-medium">How does pricing work?</span>
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div id="faq5" class="collapse-content">
+                            <p class="pb-4 text-gray-300">Private jet pricing is typically calculated by flight hours, covering all operational costs. Factors include aircraft type, distance, airport fees, catering, and any special requests. For members, we offer fixed hourly rates for more predictable budgeting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Support Section -->
+    <section class="py-20 bg-support">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <p class="uppercase tracking-widest text-sm font-medium text-yellow-300 mb-4">get in touch</p>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Contact Our Luxury Flight Team</h2>
+                <p class="max-w-2xl mx-auto">Our aviation experts are available 24/7 to assist with your private jet needs, membership inquiries, or any special requests.</p>
+            </div>
+            
+            <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-xl p-8 md:p-12 flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold mb-6">Contact Details:</h3>
+                    <div class="space-y-4">
+                        <p><span class="font-bold">Email:</span> support@flyluxury.com</p>
+                        <p><span class="font-bold">Phone:</span> +254 748 112 092</p>
+                        <p><span class="font-bold">Address:</span> 00100 Nairobi City, Kenya</p>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Connect With Us:</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-blue-400 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-white hover:text-blue-600 transition-colors text-2xl"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-white hover:text-pink-500 transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-white hover:text-green-500 transition-colors text-2xl"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="text-white hover:text-blue-300 transition-colors text-2xl"><i class="fab fa-x-twitter"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 text-sm text-gray-300">
+                            <p>We typically respond within 12 hours.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-yellow-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-yellow-500"></textarea>
+                        </div>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full transition-colors mt-6">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-16 bg-black bg-opacity-90">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2 bg-gray-900 bg-opacity-50 rounded-xl p-8">
+                    <div class="mb-8">
+                        <img src="./assets/images/logo.svg" alt="Luxury Jets Logo" class="h-12">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold mb-4">About</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li><a href="#" class="hover:text-white transition-colors">Our Story</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Leadership</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">News</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-4">Services</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li><a href="#" class="hover:text-white transition-colors">Charter</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Membership</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Jets for Sale</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Management</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-4">Resources</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li><a href="#" class="hover:text-white transition-colors">Safety</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Aircraft Guide</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Destinations</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-4">Legal</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li><a href="#" class="hover:text-white transition-colors">Terms of Use</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Accessibility</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="text-gray-500 text-sm">
+                        <p>© 2025 Morgan. All rights reserved.</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 bg-gray-900 bg-opacity-50 rounded-xl p-8 flex items-center justify-center">
+                    <div class="text-center max-w-md">
+                        <h3 class="text-3xl md:text-5xl font-bold mb-6">Find Freedom, Privacy, and Excellence in the Skies</h3>
+                        <p class="mb-8">Experience aviation redefined with our unparalleled private jet services.</p>
+                        <button class="bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-bold py-3 px-8 rounded-full transition-colors">
+                            Request a Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleFAQ(id) {
+            const content = document.getElementById(id);
+            const isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
+            
+            // Close all other FAQs first
+            document.querySelectorAll('.collapse-content').forEach(el => {
+                if (el.id !== id) {
+                    el.style.maxHeight = '0px';
+                    el.previousElementSibling.querySelector('span:last-child').textContent = '+';
+                }
+            });
+            
+            if (isCollapsed) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.previousElementSibling.querySelector('span:last-child').textContent = '-';
+            } else {
+                content.style.maxHeight = '0px';
+                content.previousElementSibling.querySelector('span:last-child').textContent = '+';
+            }
+        }
+        
+        // Duplicate logos for seamless looping
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoSlide = document.querySelector('.logo-slide');
+            const logos = logoSlide.innerHTML;
+            logoSlide.innerHTML = logos + logos;
+        });
+    </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Testimonial Slider
+            const slider = document.getElementById('testimonialSlider');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            let visibleSlides = window.innerWidth < 768 ? 1 : 2;
+            
+            function updateSlider() {
+                const slideWidth = (100 / visibleSlides);
+                slider.style.transform = `translateX(-${currentIndex * (100 / visibleSlides)}%)`;
+                
+                // Update button states
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex >= slideCount - visibleSlides;
+            }
+            
+            function handleResize() {
+                visibleSlides = window.innerWidth < 768 ? 1 : 2;
+                updateSlider();
+            }
+            
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlider();
+                }
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < slideCount - visibleSlides) {
+                    currentIndex++;
+                    updateSlider();
+                }
+            });
+            
+            window.addEventListener('resize', handleResize);
+            
+            // Initialize
+            updateSlider();
+        });
+    </script>
+
+
+      
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
